@@ -5,9 +5,19 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 body {
     background-color: black;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    color: white;
+}
+
+.assortment {}
 
 .container {
     display: flex;
@@ -34,25 +44,45 @@ body {
 }
 
 .nav-links {
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     list-style: none;
     padding-top: 12px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .nav-link:hover {
-    color: white;
+    transform: scale(1.1);
 }
 
-.car-group img {
+.car-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+}
+
+.car-card img:hover {
+    transform: scale(1.05);
+}
+
+.car-card {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.car-card img {
     width: 600px;
     height: 300px;
     border-radius: 12px;
     object-fit: cover;
     display: block;
-
+    transition: transform 0.3s ease;
 }
 
 .footer {
@@ -62,4 +92,30 @@ body {
     border-radius: 4px;
     padding-top: 5px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-right: 16px;
+}
+
+.btn {
+    width: 60px;
+    height: 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
